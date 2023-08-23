@@ -1,17 +1,8 @@
 # eikon_therapeutics
-A repo for take-home task in regards to a software Engineer at Eikon Therapeutics
+A repo for the take-home task in regards to a software Engineer at Eikon Therapeutics
 
-Commands to build the docker container:
-> docker build -t my-flask-app .    
-> docker run -p 4000:80 my-flask-app
+Run the script run_script.sh
 
-Once the docker container is up, we can even attach a shell to it and run the following commands:
+It will spin up a docker container and run the Flask app in it. Further, it will pass the curl commands to call the API endpoints in the app.py file.
+After everything, it will stop the docker container and also delete it.
 
-To go to the homepage:
-> curl -X GET http://localhost:5000/
-
-To get the result in a JSON format:
-> curl -X GET http://localhost:5000/show_data
-
-To upload data to Postgres DB:
-> curl -X POST http://localhost:5000/trigger_etl
